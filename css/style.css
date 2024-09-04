@@ -1,12 +1,14 @@
 :root {
-    --banner-clr: aliceblue;
-    --bg-img: url("../img/harmony/cover-art/evergreen-CIDERGIRL.jpg");
+    --banner-clr: rgb(220, 228, 255);
+    --bg-img: url("../img/harmony/harmony-bg.jpg");
     --icon: url("../img/harmony/harmony-icon.png");
     --icon-shift: 20px;
     --title-shift: 0px;
-    --font-clr: black;
-    --hover-clr: rgb(208, 222, 234);
+    --font-clr: rgb(64, 64, 64);
+    --hover-clr: rgb(204, 209, 240);
     --icon-edit: 0%;
+    --panel-clr: rgb(255, 255, 255, 0.3);
+    --bright: 3;
 
     --song-1: url("../img/harmony/cover-art/evergreen-CIDERGIRL.jpg");
     --song-2: url("../img/harmony/cover-art/kesshou-RyokuoushokuShakai.jpg");
@@ -20,13 +22,15 @@
 
 .discord {
     --banner-clr: rgb(36, 37, 41);
-    --bg-img: url("../img/discord/cover-art/decode-Paramore.jpg");
+    --bg-img: url("../img/discord/discord-bg.jpg");
     --icon: url("../img/discord/discord-icon.png");
-    --icon-shift: 13px;
-    --title-shift: 22px;
+    --icon-shift: 14px;
+    --title-shift: 21px;
     --font-clr: white;
     --hover-clr: rgb(15, 16, 18);
     --icon-edit: 100%;
+    --panel-clr: rgb(0, 0, 0, 0.3);
+    --bright: 1;
 
     --song-1: url("../img/discord/cover-art/decode-Paramore.jpg");
     --song-2: url("../img/discord/cover-art/duvet-Boa.jpg ");
@@ -42,7 +46,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--font-clr);
 }
@@ -50,12 +54,16 @@
 .background-image {
     width: 100%;
     height: 100%;
+    background-size: 100% 100%;
     position: fixed;
     background-image: var(--bg-img);
+    filter: hue-rotate(-15deg);
+    filter: brightness(var(--bright));
+    z-index: -1;
 }
 
 .wrap-div {
-    width: 800px;
+    width: 700px;
     margin: 20px auto;
 }
 
@@ -85,10 +93,10 @@ header {
 
 .icon {
     padding: 0px 8px;
-    margin: 16px 20px 16px;
+    margin: 12px 20px 12px;
     margin-left: var(--icon-shift);
     content: var(--icon);
-    height: 82px;
+    height: 60px;
     filter: invert(var(--icon-edit));
 }
 
@@ -101,7 +109,7 @@ header {
 
 .nav-links {
     font-size: 20px;
-    padding: 48px;
+    padding: 30px;
     width: 150px;
     text-decoration: none;
     flex: 1 1 0;
@@ -130,13 +138,20 @@ header {
     padding: 20px;
     height: auto; /* change this to the individual ones later */
     border-radius: 40px;
-    backdrop-filter: blur(10px);
+    background-color: var(--panel-clr);
+    backdrop-filter: blur(5px);
     border: 4px solid gray;
+    position: relative;
+
+    --x-offset: 0px;
+    --y-offset: 0px;
 }
 
 .panel .heading {
     font-size: 40px;
     margin: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .panel p {
@@ -144,10 +159,15 @@ header {
     margin: 10px;
 }
 
+.panel:hover {
+    top: var(--y-offset);
+    right: var(--x-offset);
+}
+
 /* [About Me] */
 
 .about-me {
-    margin-top: 150px;
+    margin-top: 120px;
 }
 
 /* [Fav Songs] */
@@ -270,3 +290,22 @@ header {
     margin: 5px;
     font-size: 18px;
 }
+
+/* [Links] */
+
+.links-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.github {
+    margin-right: -10px;
+}
+
+.links-flex img {
+    filter: invert(calc(80% - var(--icon-edit)));
+}
+
