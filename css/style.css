@@ -9,6 +9,11 @@
     --icon-edit: 0%;
     --panel-clr: rgb(255, 255, 255, 0.3);
     --bright: 3;
+    --rotate: 0deg;
+
+    --crack-1: ;
+    --crack-2: ;
+    --crack-3: ;
 
     --song-1: url("../img/harmony/cover-art/evergreen-CIDERGIRL.jpg");
     --song-2: url("../img/harmony/cover-art/kesshou-RyokuoushokuShakai.jpg");
@@ -31,15 +36,20 @@
     --icon-edit: 100%;
     --panel-clr: rgb(0, 0, 0, 0.3);
     --bright: 1;
+    --rotate: 1deg;
+
+    --crack-1: url("../img/discord/cracked-screens/crack-1.png");
+    --crack-2: url("../img/discord/cracked-screens/crack-2.webp");
+    --crack-3: url("../img/discord/cracked-screens/crack-3.png");
 
     --song-1: url("../img/discord/cover-art/decode-Paramore.jpg");
     --song-2: url("../img/discord/cover-art/duvet-Boa.jpg ");
-    --song-3: url("../img/discord/cover-art/hangOnMe-StVincent.jpg");
+    --song-3: url("../img/discord/cover-art/whosGonnaSaveUNow-RinaSawayama.jpg");
     --song-4: url("../img/discord/cover-art/kathleen-CatfishAndTheBottlemen.jpg");
-    --song-5: url("../img/discord/cover-art/maybeItsMyFault-WILLOW.jpg");
+    --song-5: url("../img/discord/cover-art/hangOnMe-StVincent.jpg"); 
     --song-6: url("../img/discord/cover-art/raisonDetre-Eve.jpg");
     --song-7: url("../img/discord/cover-art/thnksFrThMmrs-FallOutBoy.jpg");
-    --song-8: url("../img/discord/cover-art/whosGonnaSaveUNow-RinaSawayama.jpg");
+    --song-8: url("../img/discord/cover-art/maybeItsMyFault-WILLOW.jpg");
 }
 
 * {
@@ -49,6 +59,7 @@
     /* border: 1px solid red; */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--font-clr);
+    line-height: 1.5;
 }
 
 .background-image {
@@ -134,7 +145,7 @@ header {
 /* [Text Stuff] */
 
 .panel {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     padding: 20px;
     height: auto; /* change this to the individual ones later */
     border-radius: 40px;
@@ -156,7 +167,7 @@ header {
 
 .panel p {
     font-size: 24px;
-    margin: 10px;
+    text-align: center;
 }
 
 .panel:hover {
@@ -164,19 +175,50 @@ header {
     right: var(--x-offset);
 }
 
+#emoji-line {
+    padding-top: 20px;
+}
+
 /* [About Me] */
 
 .about-me {
     margin-top: 120px;
+    background-image: var(--crack-1);
+    background-size: 120% 140%;
+    background-position: -200px -50px;
+    transform: rotate(calc(-2 *var(--rotate)));
 }
 
+/* [Hobbies] */
+
+.hobbies-list {
+    list-style-type: none;
+    font-size: 24px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.hobbies {
+    background-image: var(--crack-2);
+    background-size: 80% 120%;
+    background-position: 100px 0px;
+    transform: rotate(var(--rotate));
+    filter: invert(calc(0.1 * var(--icon-edit)));
+} 
+
 /* [Fav Songs] */
+
+.favourite-songs {
+    background-image: var(--crack-3);
+    background-size: 100%;
+    backdrop-filter: invert(var(--icon-edit)); 
+} 
 
 .songs-list {
     list-style-type: none;
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 285px;
     overflow: hidden;
     mask-image: linear-gradient(
         to right, 
@@ -194,7 +236,7 @@ header {
     border-radius: 5px;
     position: absolute;
     width: 220px;
-    height: 280px;
+    height: 285px;
     left: 100%;
     animation-name: scroll;
     animation-duration: 50s;

@@ -11,15 +11,16 @@ themeToggleBtn.addEventListener('click', () => {
     if (flag == false) {
         document.getElementById("title").innerHTML = "Discord";
         document.getElementById("about-me").style.backgroundColor = "black";
+        document.getElementById("emoji-line").innerHTML = "👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹";
 
         document.getElementById("name-1").innerHTML = "Decode - Paramore";
         document.getElementById("name-2").innerHTML = "Duvet - Bôa";
-        document.getElementById("name-3").innerHTML = "Hang On Me - St. Vincent";
+        document.getElementById("name-3").innerHTML = "Who's Gonna Save U Now? - Rina Sawayama";
         document.getElementById("name-4").innerHTML = "Kathleen - Catfish And The Bottlemen";
-        document.getElementById("name-5").innerHTML = "&ltmaybe it's my fault&gt - WILLOW";
+        document.getElementById("name-5").innerHTML = "Hang On Me - St. Vincent";
         document.getElementById("name-6").innerHTML = "Raison Detre - Eve";
         document.getElementById("name-7").innerHTML = "Thnks fr th Mmrs - Fall Out Boy";
-        document.getElementById("name-8").innerHTML = "Who's Gonna Save U Now? - Rina Sawayama";
+        document.getElementById("name-8").innerHTML = "&ltmaybe it's my fault&gt - WILLOW";
         
         
         function randomiseOffset() {
@@ -36,6 +37,7 @@ themeToggleBtn.addEventListener('click', () => {
         
     } else {
         document.getElementById("title").innerHTML = "Harmony";
+        document.getElementById("emoji-line").innerHTML = "🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓🤓";
 
         document.getElementById("name-1").innerHTML = "Evergreen - CIDER GIRL";
         document.getElementById("name-2").innerHTML = "Kesshou - Ryokuoushoku Shakai";
@@ -53,5 +55,4 @@ themeToggleBtn.addEventListener('click', () => {
         });
     }
 });
-
 
