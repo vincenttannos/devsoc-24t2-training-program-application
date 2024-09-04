@@ -1,16 +1,57 @@
+:root {
+    --banner-clr: aliceblue;
+    --bg-img: url("../img/harmony/cover-art/evergreen-CIDERGIRL.jpg");
+    --icon: url("../img/harmony/harmony-icon.png");
+    --icon-shift: 20px;
+    --title-shift: 0px;
+    --font-clr: black;
+    --hover-clr: rgb(208, 222, 234);
+    --icon-edit: 0%;
+
+    --song-1: url("../img/harmony/cover-art/evergreen-CIDERGIRL.jpg");
+    --song-2: url("../img/harmony/cover-art/kesshou-RyokuoushokuShakai.jpg");
+    --song-3: url("../img/harmony/cover-art/tekIt-Cafune.jpg");
+    --song-4: url("../img/harmony/cover-art/changeYourMind-TheKillers.jpg");
+    --song-5: url("../img/harmony/cover-art/jetLag-SimplePlan.jpg");
+    --song-6: url("../img/harmony/cover-art/koshaberiBiyori-FantasticYouth.jpg");
+    --song-7: url("../img/harmony/cover-art/koi-GenHoshino.jpg");
+    --song-8: url("../img/harmony/cover-art/talk-Beabadoobee.jpg");
+}
+
+.discord {
+    --banner-clr: rgb(36, 37, 41);
+    --bg-img: url("../img/discord/cover-art/decode-Paramore.jpg");
+    --icon: url("../img/discord/discord-icon.png");
+    --icon-shift: 13px;
+    --title-shift: 22px;
+    --font-clr: white;
+    --hover-clr: rgb(15, 16, 18);
+    --icon-edit: 100%;
+
+    --song-1: url("../img/discord/cover-art/decode-Paramore.jpg");
+    --song-2: url("../img/discord/cover-art/duvet-Boa.jpg ");
+    --song-3: url("../img/discord/cover-art/hangOnMe-StVincent.jpg");
+    --song-4: url("../img/discord/cover-art/kathleen-CatfishAndTheBottlemen.jpg");
+    --song-5: url("../img/discord/cover-art/maybeItsMyFault-WILLOW.jpg");
+    --song-6: url("../img/discord/cover-art/raisonDetre-Eve.jpg");
+    --song-7: url("../img/discord/cover-art/thnksFrThMmrs-FallOutBoy.jpg");
+    --song-8: url("../img/discord/cover-art/whosGonnaSaveUNow-RinaSawayama.jpg");
+}
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    /* border: 1px solid red; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    border: 1px solid red;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--font-clr);
 }
 
 .background-image {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-image: url("../img/song-cover-arts/evergreen-CIDERGIRL.jpg");
+    background-image: var(--bg-img);
 }
 
 .wrap-div {
@@ -24,8 +65,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aliceblue;
-    border: 1px solid gray;
+    background-color: var(--banner-clr);
+    border-bottom: 1px solid gray;
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -38,12 +79,21 @@ header {
     align-items: center;
 }
 
-.harmony-icon {
+#title {
+    margin-right: var(--title-shift);
+}
+
+.icon {
     padding: 0px 8px;
-    margin: 16px 20px 16px 30px;
+    margin: 16px 20px 16px;
+    margin-left: var(--icon-shift);
+    content: var(--icon);
+    height: 82px;
+    filter: invert(var(--icon-edit));
 }
 
 .header-links {
+    margin-right: 40px;
     width: 1000px;
     display: flex;
     align-items: center;
@@ -51,16 +101,16 @@ header {
 
 .nav-links {
     font-size: 20px;
-    padding: 32px;
+    padding: 48px;
     width: 150px;
     text-decoration: none;
-    color: black;
     flex: 1 1 0;
     text-align: center;
+    color: var(--font-clr);
 }
 
 .nav-links:hover {
-    background-color: rgb(191, 209, 225);
+    background-color: var(--hover-clr);
 }
 
 .switch-mode {
@@ -104,10 +154,6 @@ header {
 
 .songs-list {
     list-style-type: none;
-    /* display: flex;
-    gap: 50px;
-    justify-content: center; */
-    margin: 30px 10px 10px;
     position: relative;
     width: 100%;
     height: 280px;
@@ -123,7 +169,7 @@ header {
 
 .song-card {
     padding: 10px;
-    background-color: rgb(233, 251, 255);
+    background-color: var(--banner-clr);
     border: 1px solid gray;
     border-radius: 5px;
     position: absolute;
@@ -134,10 +180,6 @@ header {
     animation-duration: 50s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-.song-card img {
-    border: 1px solid gray;
 }
 
 @keyframes scroll {
@@ -178,6 +220,44 @@ header {
     animation-delay: calc(50s / 8 * (8 - 8) * -1);
 }
 
+.song {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+}
+
+.song-1 {
+    content: var(--song-1);
+}
+
+.song-2 {
+    content: var(--song-2);
+}
+
+.song-3 {
+    content: var(--song-3);
+}
+
+.song-4 {
+    content: var(--song-4);
+}
+
+.song-5 {
+    content: var(--song-5);
+}
+
+.song-6 {
+    content: var(--song-6);
+}
+
+.song-7 {
+    content: var(--song-7);
+}
+
+.song-8 {
+    content: var(--song-8);
+}
+
 .song-name-flex {
     display: flex;
     align-items: center;
@@ -188,5 +268,5 @@ header {
 .song-name-flex .song-name {
     text-align: center;
     margin: 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
