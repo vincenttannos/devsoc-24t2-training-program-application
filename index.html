@@ -3,56 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Harmony/Discord Website</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div>
+  <!-- div here for nav bar to link to - ensures that the headings aren't 
+    hidden behind the header -->
+  <div id="about-me">i can be your angle....or yuor devil</div>
+  <div class="background-image"></div>
+  <div class="wrap-div">
+
     <header>
-      <img>
-      <h3>Harmony</h3>
-      <p>About Me</p>
-      <p>Hobbies</p>
-      <p>Fav Songs</p>
-      <p>Links</p>
-      <button></button>
+      <div class="icon-title">
+        <img src="img/harmony-icon.png" height="50px" alt="meditation icon" class="harmony-icon">
+        <h1>Harmony</h1>
+      </div>
+      <div class="header-links">
+        <a class="nav-links" href="#about-me">About Me</a> 
+        <a class="nav-links" href="#hobbies">Hobbies</a>
+        <a class="nav-links" href="#favourite-songs">Fav Songs</a>
+        <a class="nav-links" href="#links">Links</a>
+      </div>
+      <button class="switch-mode"></button>
     </header>
+  
     <div class="panel about-me">
+      <h1 class="heading">About Me</h1>
+      <p>Hi! I'm Vincent, a first year studying Computer Science and Actuarial 
+        Studies.
 
+      </p>
+      <!-- div here for nav bar to link to - ensures that the headings aren't 
+       hidden behind the header -->
+      <div id="hobbies"></div>
     </div>
+
     <div class="panel hobbies">
+      <h1 class="heading">Hobbies</h1>
 
+      <div id="favourite-songs"></div>
     </div>
+
     <div class="panel favourite-songs">
+      <h1 class="heading">Favourite Songs (rn)</h1>
       <ul class="songs-list">
-        <li>
+        <li class="song-card card-1">
           <img src="img/song-cover-arts/evergreen-CIDERGIRL.jpg" height="200px"
           width="200px" alt="evergreen-CIDERGIRL">
-          <p class="song-name">Evergreen - CIDER GIRL</p>
+          <div class="song-name-flex">
+            <p class="song-name">Evergreen - CIDER GIRL</p>
+          </div>
         </li>
-        <li>
+        <li class="song-card card-2">
           <img src="img/song-cover-arts/kesshou-RyokuoushokuShakai.jpg" height="200px"
           width="200px" alt="kesshou-RyokuoushokuShakai">
-          <p class="song-name">Kesshou - Ryokuoushoku Shakai</p>
+          <div class="song-name-flex">
+            <p class="song-name">Kesshou - Ryokuoushoku Shakai</p>
+          </div>
         </li>
-        <li>
+        <li class="song-card card-3">
           <img src="img/song-cover-arts/tekIt-Cafune.jpg" height="200px"
           width="200px" alt="tekIt-Cafuné">
-          <p class="song-name">Tek It - Cafuné</p>
+          <div class="song-name-flex">
+            <p class="song-name">Tek It - Cafuné</p>
+          </div>
         </li>
-        <li>
+        <li class="song-card card-4">
           <img src="img/song-cover-arts/changeYourMind-TheKillers.jpg" height="200px"
           width="200px" alt="changeYourMind-TheKillers">
-          <p class="song-name">Change Your Mind - The Killers</p>
+          <div class="song-name-flex">
+            <p class="song-name">Change Your Mind - The Killers</p>
+          </div>
         </li>
-        <li>
+        <li class="song-card card-5">
           <img src="img/song-cover-arts/jetLag-SimplePlan.jpg" height="200px"
           width="200px" alt="jetLag-SimplePlan">
-          <p class="song-name">Jet Lag - Simple Plan ft Natasha Bedingfield</p>
+          <div class="song-name-flex">
+            <p class="song-name">Jet Lag - Simple Plan ft Natasha Bedingfield</p>
+          </div>
+        </li>
+        <li class="song-card card-6">
+          <img src="img/song-cover-arts/koshaberiBiyori-FantasticYouth.jpg" height="200px"
+          width="200px" alt="koshaberiBiyori-FantasticYouth">
+          <div class="song-name-flex">
+            <p class="song-name">Koshaberi Biyori - FantasticYouth</p>
+          </div>
+        </li>
+        <li class="song-card card-7">
+          <img src="img/song-cover-arts/koi-GenHoshino.jpg" height="200px"
+          width="200px" alt="koi-GenHoshino">
+          <div class="song-name-flex">
+            <p class="song-name">Koi - Gen Hoshino</p>
+          </div>
+        </li>
+        <li class="song-card card-8">
+          <img src="img/song-cover-arts/talk-Beabadoobee.jpg" height="200px"
+          width="200px" alt="talk-Beabadoobee">
+          <div class="song-name-flex">
+            <p class="song-name">Talk - Beabadoobee</p>
+          </div>
         </li>
       </ul>
+
+      <div id="favourite-songs"></div>
     </div>
-    <div class="links">
+
+    <div class="links" id="links">
 
     </div>
   </div>
