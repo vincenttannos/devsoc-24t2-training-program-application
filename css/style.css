@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+html {
+    background-color: aliceblue;
+}
+
+body {
+    width: 800px;
+    margin: 20px auto;
+}
+
+header {
+    display: flex;
+}
+
+.panel {
+    margin: 100px 0px;
+}
+
+.songs-list {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    justify-content: center;;
+}
+
+.song-name {
+    text-align: center;
+}
