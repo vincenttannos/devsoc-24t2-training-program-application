@@ -31,6 +31,14 @@ themeToggleBtn.addEventListener('click', () => {
                 panel.style.setProperty("--x-offset", xOffset + "px");
                 panel.style.setProperty("--y-offset", yOffset + "px");
             });
+
+            const navs = document.querySelectorAll(".nav-links");
+            navs.forEach((nav) => {
+                let xOffset = (Math.random() - Math.random()) * 20;
+                let yOffset = (Math.random() - Math.random()) * 20;
+                nav.style.setProperty("--x-offset", xOffset + "px");
+                nav.style.setProperty("--y-offset", yOffset + "px");
+            });
         }
         
         intervalRet = setInterval(randomiseOffset, 80);
@@ -52,6 +60,12 @@ themeToggleBtn.addEventListener('click', () => {
         panels.forEach((panel) => {
             panel.style.setProperty("--x-offset", "0px");
             panel.style.setProperty("--y-offset", "0px");
+        });
+
+        const navs = document.querySelectorAll(".nav-links");
+        navs.forEach((nav) => {
+            nav.style.setProperty("--x-offset", "0px");
+            nav.style.setProperty("--y-offset", "0px");
         });
     }
 });

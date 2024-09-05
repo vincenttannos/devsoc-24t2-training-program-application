@@ -1,5 +1,6 @@
 :root {
-    --banner-clr: rgb(220, 228, 255);
+    --fonts: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --banner-clr: rgb(250, 224, 193);
     --bg-img: url("../img/harmony/harmony-bg.jpg");
     --icon: url("../img/harmony/harmony-icon.png");
     --icon-shift: 20px;
@@ -7,6 +8,9 @@
     --font-clr: rgb(64, 64, 64);
     --hover-clr: rgb(204, 209, 240);
     --icon-edit: 0%;
+    --button-clr: rgb(249, 245, 245);
+    --shadow-clr: rgb(158, 162, 175);
+    --circle-offset: 4px;
     --panel-clr: rgb(255, 255, 255, 0.3);
     --bright: 3;
     --rotate: 0deg;
@@ -26,14 +30,18 @@
 }
 
 .discord {
-    --banner-clr: rgb(36, 37, 41);
+    --fonts: 'Courier New', monospace;
+    --banner-clr: rgb(30, 9, 9);
     --bg-img: url("../img/discord/discord-bg.jpg");
     --icon: url("../img/discord/discord-icon.png");
     --icon-shift: 14px;
     --title-shift: 21px;
     --font-clr: white;
-    --hover-clr: rgb(15, 16, 18);
+    --hover-clr: rgb(0, 251, 255);
     --icon-edit: 100%;
+    --button-clr: rgb(81, 81, 81);
+    --shadow-clr: rgb(21, 18, 18);
+    --circle-offset: 44px;
     --panel-clr: rgb(0, 0, 0, 0.3);
     --bright: 1;
     --rotate: 1deg;
@@ -57,7 +65,7 @@
     margin: 0px;
     box-sizing: border-box;
     /* border: 1px solid red; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--fonts);
     color: var(--font-clr);
     line-height: 1.5;
 }
@@ -126,20 +134,38 @@ header {
     flex: 1 1 0;
     text-align: center;
     color: var(--font-clr);
+
+    position: relative;
+    --x-offset: 0px;
+    --y-offset: 0px;
 }
 
 .nav-links:hover {
     background-color: var(--hover-clr);
+    top: var(--y-offset);
+    right: var(--x-offset);
 }
 
 .switch-mode {
-    padding: 20px;
+    height: 36px;
+    width: 80px;
+    border-radius: 20px;
+    border: 1px solid var(--shadow-clr);
     margin: 20px;
+    margin-right: 60px;
     /* margin-left: auto; */
+    background-color: var(--button-clr);
+    position: relative;
+    /* box-shadow: inset 0px -1px 3px 1px var(--shadow-clr); */
 }
 
-.switch-mode:hover {
-    background-color: darkgray;
+.button-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: var(--shadow-clr);
+    position: relative;
+    left: var(--circle-offset);
 }
 
 /* [Text Stuff] */
