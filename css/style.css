@@ -1,20 +1,22 @@
+/* Variables used for harmony mode */
 :root {
     --fonts: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --banner-clr: rgb(250, 224, 193);
     --bg-img: url("../img/harmony/harmony-bg.jpg");
+    --bright: 3;
+    --font-clr: rgb(64, 64, 64);
+
+    --banner-clr: rgb(250, 224, 193);
     --icon: url("../img/harmony/harmony-icon.png");
     --icon-shift: 20px;
-    --title-shift: 0px;
-    --font-clr: rgb(64, 64, 64);
-    --hover-clr: rgb(204, 209, 240);
     --icon-edit: 0%;
+    --title-shift: 0px;
+    --hover-clr: rgb(204, 209, 240);
     --button-clr: rgb(249, 245, 245);
     --shadow-clr: rgb(158, 162, 175);
-    --circle-offset: 4px;
-    --panel-clr: rgb(255, 255, 255, 0.3);
-    --bright: 3;
-    --rotate: 0deg;
+    --circle-offset: 3px;
 
+    --panel-clr: rgb(255, 255, 255, 0.3);
+    --rotate: 0deg;
     --crack-1: ;
     --crack-2: ;
     --crack-3: ;
@@ -29,23 +31,25 @@
     --song-8: url("../img/harmony/cover-art/talk-Beabadoobee.jpg");
 }
 
+/* Variables used for discord mode */
 .discord {
-    --fonts: 'Courier New', monospace;
-    --banner-clr: rgb(30, 9, 9);
+    --fonts: 'Courier New', 'DotGothic16', monospace;
     --bg-img: url("../img/discord/discord-bg.jpg");
+    --bright: 1;
+    --font-clr: white;
+    
+    --banner-clr: rgb(30, 9, 9);
     --icon: url("../img/discord/discord-icon.png");
     --icon-shift: 14px;
-    --title-shift: 21px;
-    --font-clr: white;
-    --hover-clr: rgb(0, 251, 255);
     --icon-edit: 100%;
+    --title-shift: 21px;
+    --hover-clr: rgb(0, 251, 255);
     --button-clr: rgb(81, 81, 81);
     --shadow-clr: rgb(21, 18, 18);
-    --circle-offset: 44px;
-    --panel-clr: rgb(0, 0, 0, 0.3);
-    --bright: 1;
-    --rotate: 1deg;
+    --circle-offset: 45px;
 
+    --panel-clr: rgb(0, 0, 0, 0.3);
+    --rotate: 1deg;
     --crack-1: url("../img/discord/cracked-screens/crack-1.png");
     --crack-2: url("../img/discord/cracked-screens/crack-2.webp");
     --crack-3: url("../img/discord/cracked-screens/crack-3.png");
@@ -64,7 +68,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    /* border: 1px solid red; */
     font-family: var(--fonts);
     color: var(--font-clr);
     line-height: 1.5;
@@ -86,7 +89,7 @@
     margin: 20px auto;
 }
 
-/* [Header Stuff] */
+/* [Header] */
 
 header {
     display: flex;
@@ -106,7 +109,7 @@ header {
     align-items: center;
 }
 
-#title {
+.title {
     margin-right: var(--title-shift);
 }
 
@@ -126,7 +129,7 @@ header {
     align-items: center;
 }
 
-.nav-links {
+.nav-link {
     font-size: 20px;
     padding: 30px;
     width: 150px;
@@ -140,7 +143,8 @@ header {
     --y-offset: 0px;
 }
 
-.nav-links:hover {
+/* Produces a shaking effect in discord mode */
+.nav-link:hover {
     background-color: var(--hover-clr);
     top: var(--y-offset);
     right: var(--x-offset);
@@ -153,10 +157,8 @@ header {
     border: 1px solid var(--shadow-clr);
     margin: 20px;
     margin-right: 60px;
-    /* margin-left: auto; */
     background-color: var(--button-clr);
     position: relative;
-    /* box-shadow: inset 0px -1px 3px 1px var(--shadow-clr); */
 }
 
 .button-circle {
@@ -168,18 +170,19 @@ header {
     left: var(--circle-offset);
 }
 
-/* [Text Stuff] */
+/* [Main Text] */
 
 .panel {
     margin-bottom: 60px;
     padding: 20px;
-    height: auto; /* change this to the individual ones later */
+    height: auto; 
     border-radius: 40px;
     background-color: var(--panel-clr);
     backdrop-filter: blur(5px);
     border: 4px solid gray;
-    position: relative;
+    text-align: center;
 
+    position: relative;
     --x-offset: 0px;
     --y-offset: 0px;
 }
@@ -188,21 +191,16 @@ header {
     font-size: 40px;
     margin: 10px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .panel p {
     font-size: 24px;
-    text-align: center;
 }
 
+/* Adds a shaking effect in discord mode */
 .panel:hover {
     top: var(--y-offset);
     right: var(--x-offset);
-}
-
-#emoji-line {
-    padding-top: 20px;
 }
 
 /* [About Me] */
@@ -215,14 +213,11 @@ header {
     transform: rotate(calc(-2 *var(--rotate)));
 }
 
-/* [Hobbies] */
-
-.hobbies-list {
-    list-style-type: none;
-    font-size: 24px;
-    margin-left: 60px;
-    margin-bottom: 20px;
+.emoji-line {
+    padding-top: 20px;
 }
+
+/* [Hobbies] */
 
 .hobbies {
     background-image: var(--crack-2);
@@ -232,7 +227,15 @@ header {
     filter: invert(calc(0.1 * var(--icon-edit)));
 } 
 
-/* [Fav Songs] */
+.hobbies-list {
+    list-style-type: none;
+    font-size: 24px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* [Favourite Songs] */
 
 .favourite-songs {
     background-image: var(--crack-3);
@@ -244,8 +247,9 @@ header {
     list-style-type: none;
     position: relative;
     width: 100%;
-    height: 285px;
+    height: 305px;
     overflow: hidden;
+    /* Blurs the left and right sides of the wrapper for the song cards */
     mask-image: linear-gradient(
         to right, 
         rgba(0, 0, 0, 0),
@@ -260,50 +264,47 @@ header {
     background-color: var(--banner-clr);
     border: 1px solid gray;
     border-radius: 5px;
-    position: absolute;
     width: 220px;
-    height: 285px;
-    left: 100%;
+    height: 305px;
+
+    /* Marquee for song cards */
+    position: absolute;
+    left: 120%;
     animation-name: scroll;
     animation-duration: 50s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
+/* Scroll from right to left */
 @keyframes scroll {
     to {
         left: -220%;
     }
 }
 
+/* Offsetting the cards so they don't stackon top of each other */
 .card-1 {
     animation-delay: calc(50s / 8 * (8 - 1) * -1);
 }
-
 .card-2 {
     animation-delay: calc(50s / 8 * (8 - 2) * -1);
 }
-
 .card-3 {
     animation-delay: calc(50s / 8 * (8 - 3) * -1);
 }
-
 .card-4 {
     animation-delay: calc(50s / 8 * (8 - 4) * -1);
 }
-
 .card-5 {
     animation-delay: calc(50s / 8 * (8 - 5) * -1);
 }
-
 .card-6 {
     animation-delay: calc(50s / 8 * (8 - 6) * -1);
 }
-
 .card-7 {
     animation-delay: calc(50s / 8 * (8 - 7) * -1);
 }
-
 .card-8 {
     animation-delay: calc(50s / 8 * (8 - 8) * -1);
 }
@@ -314,34 +315,28 @@ header {
     border: 1px solid gray;
 }
 
+/* Changing the images when the mode changes */
 .song-1 {
     content: var(--song-1);
 }
-
 .song-2 {
     content: var(--song-2);
 }
-
 .song-3 {
     content: var(--song-3);
 }
-
 .song-4 {
     content: var(--song-4);
 }
-
 .song-5 {
     content: var(--song-5);
 }
-
 .song-6 {
     content: var(--song-6);
 }
-
 .song-7 {
     content: var(--song-7);
 }
-
 .song-8 {
     content: var(--song-8);
 }
@@ -350,7 +345,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 80px;
 }
 
 .song-name-flex .song-name {
@@ -369,10 +364,12 @@ header {
     list-style-type: none;
 }
 
+/* Changing Github icon because the PNG had a transparent border */
 .github {
     margin-right: -10px;
 }
 
+/* Changing the colour of the icons */
 .links-flex img {
     filter: invert(calc(80% - var(--icon-edit)));
 }
