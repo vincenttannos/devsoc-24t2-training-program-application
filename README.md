@@ -1,6 +1,6 @@
-# devsoc-24t2-training-program-application
+# devsoc-24t3-training-program-application
 
-## https://vincenttannos.github.io/devsoc-24t2-training-program-application/
+## https://vincenttannos.github.io/devsoc-24t3-training-program-application/
 
 Theme: Harmony/Discord
 
